@@ -1,0 +1,22 @@
+header {
+text-align: center;
+background-color: lightsteelblue;
+font-style: italic;
+text-decoration: rgb(39, 39, 46);
+font-size: 40px;
+color:slateblue
+
+}
+
+#middle {
+    border: 2px solid gray;
+    border-collapse: collapse;
+    background-color: khaki;
+    padding: 5px;
+}
+
+#seen {
+    text-align: right
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Waterfall&display=swap');
