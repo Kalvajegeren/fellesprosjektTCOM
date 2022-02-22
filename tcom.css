@@ -1,11 +1,22 @@
 header {
+  /*   border: 2px solid gray;
 text-align: center;
 background-color: lightsteelblue;
 font-style: italic;
 text-decoration: rgb(39, 39, 46);
 font-size: 40px;
 color:slateblue
-
+ */
+ background-color: AliceBlue;
+ border: solid;
+ border-width: 1px;
+ border-color: CornflowerBlue;
+ margin: 0px 2px 15px 2px;
+ padding: 0px 17px 5px 17px;
+ border-radius: 25px;
+ font-family: Verdana, Geneva, sans-serif;
+ text-align: center;
+ font-family: "Audiowide", sans-serif;
 }
 
 #middle {
@@ -15,8 +26,82 @@ color:slateblue
     padding: 5px;
 }
 
-#seen {
-    text-align: right
+#gridContainer{
+  display: grid;
+  grid-template-columns: auto;
+  background-color: cornflowerblue ;
+  padding: 10px;
+
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Waterfall&display=swap');
+#grid-Item {
+background-color: cornflowerblue;
+border:1px solid darkgoldenrod;
+padding: 20px;
+font-size: 30px;
+text-align: center;
+
+}
+
+.liste{
+  background-color: rgb(190, 226, 240);
+ border: solid;
+ border-width: 1px;
+ border-color: cornflowerblue;
+ margin: 10px 2px 15px 2px;
+ padding: 0px 17px 5px 17px;
+ border-radius: 25px;
+ font-family: Verdana, Geneva, sans-serif;
+ text-align: center;
+}
+
+li{
+  list-style: none;
+}
+
+#wrapper{
+  position: absolute;
+}
+
+.remove{
+  
+    position: relative; 
+  left: 300px;
+  top: 30px; 
+margin: 10px;
+width: 100px;
+    display: inline-block;
+  
+}
+
+.sett{
+  width: 100px;
+  margin: 10px;
+  display: inline-block;
+  background-color: chocolate;
+}
+.towatch{
+  margin-left: 10px;
+  width: 100px;
+    display: inline-block;
+}
+
+#p{
+  text-align: right;
+  color: blue;
+  }
+
+  #Bottom{
+    text-align: justify;
+  
+    
+  }
+
+   .h1{
+    font-family: "Audiowide", sans-serif;
+  }
+ 
+  .Stylesett{
+    font-family: "Audiowide", sans-serif;
+    float: left;
+  } 

@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie rater</title>
 <link rel="stylesheet" href="tcom.css">
+<script src="tcom.js"></script>
 </head>
-
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
 <body>
     <div id="wrapper"></div>
 
@@ -25,25 +26,115 @@
 <div id="middle">
 
 <div></div>
-<input type="text" id="input" placeholder="Enter Movie">
+<input type="text" id="title" placeholder="Title">
 <div></div>
 <input type="text" id="year" placeholder="Year">
 <div></div>
-<input type="text" id="directo" placeholder="Director">
+<input type="text" id="director" placeholder="Director">
 <div></div>
 <input type="text" id="rating" placeholder="Rating 1-10">
 <div></div>
 <input type="text" id="comment" placeholder="Comment">
-<button id="addMovie"> Add movie</button>
-<button id="addMovie"> Add Picture</button>
 
 
+<select name="toseeornototsee" id="toseeornototsee">
+    <option value="Seen">Seen</option>
+    <option value="To Watch">To watch</option>
+  </select>
+  
+  <button id="addPicture"> Add Picture</button>
+  <button id="addMovie" onclick="addMovie"> Add movie</button>
 
 
 
 
 </div>
 
+<div id="movies">
+    
 
+</div>
+
+<script>
+
+let filmer = document.getElementById("movies")
+let addMovie = document.getElementById("addMovie")
+let addPicture = document.getElementById("addPicture")
+let deleteMovie = document.getElementById("div")
+
+//Lag en knapp som legger til info om filmene
+addMovie.addEventListener("click", function(){
+    let myMovie = document.createElement("div")
+    myMovie.className = "liste";
+
+    let removeButton = document.createElement("button" )
+    removeButton.innerText= ("Remove")
+    removeButton.className= "remove"
+
+    let title = document.getElementById("title").value;
+    let year = document.getElementById("year").value;
+    let director = document.getElementById("director").value
+    let rating = document.getElementById("rating").value
+    let comment = document.getElementById("comment").value
+
+    let settellerikke = document.getElementById("toseeornototsee").value
+    let settellerikke2 = document.createElement("p");
+    settellerikke2.className = "Stylesett"
+    settellerikke2.innerHTML = settellerikke
+
+
+
+    let list = document.createElement("ul")
+    let list1 = document.createElement("li")
+    let list2 = document.createElement("li")
+    let list3 = document.createElement("li")
+    let list4 = document.createElement("li")
+    let list5 = document.createElement("li")
+
+    list1.innerHTML = title
+    list2.innerHTML = year
+    list3.innerHTML = director
+    list4.innerHTML = rating
+    list5.innerHTML = comment
+
+    list.appendChild (list1)
+    list.appendChild (list2)
+    list.appendChild (list3)
+    list.appendChild (list4)
+    list.appendChild (list5)
+   
+    myMovie.appendChild (removeButton)
+    myMovie.appendChild (settellerikke2)
+myMovie.appendChild(list)
+    filmer.appendChild(myMovie);
+
+    let elements = document.getElementsByClassName("remove");
+
+for(let i = 0; i <elements.length; i++ ){
+    elements[i].addEventListener("click", function(){
+elements[i].parentElement.style.display = "none"
+})
+}
+        });
+
+ 
+
+  
+
+
+
+
+
+
+</script>
+<div id="Bottom">
+    <h5>
+    <address>
+        Rating you favourite movies since 2022 <br>
+        Produced by Tommy Evertsen A.K.A Mr.byff <br>
+
+    </address>
+    </h5>
+</div>
 </body>
 </html>
